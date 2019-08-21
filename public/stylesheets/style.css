@@ -1,0 +1,32 @@
+
+.my-form
+{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: black;
+}
+
+.my-form .row
+{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.login-form
+{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.login-form .row
+{
+  margin-left: 0;
+  margin-right: 0;
+}
+.card-header{
+  background-color: #b40500;
+  font-weight: bold;
+}
+.error{
+  color: red;
+}
