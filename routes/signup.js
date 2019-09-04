@@ -48,7 +48,7 @@ router.post('/',function (req,res) {
                     } else {
                         console.log('successfully inserted' + result)
 
-                        res.redirect("/success")
+                        res.redirect('/success')
 
                     }
 
