@@ -20,16 +20,29 @@ $().ready(function () {
                 email: true,
                 remote :
                     {
-                        url: '/validation/email',
+                        url: '/validation',
                         type: 'post',
                         data:
                             {
-                                '_email': $('#email').val()
+                                _email:function () {
+                                    return $('#email').val()
+                                }
                             }
                     }
             },
             _username:{
                 required:true,
+                remote :
+                    {
+                        url: '/validation',
+                        type: 'post',
+                        data:
+                            {
+                                _username:function () {
+                                    return $('#username').val()
+                                }
+                            }
+                    }
             },
             _password:{
                 required:true,
@@ -66,7 +79,8 @@ $().ready(function () {
                 remote: "Email id already exist"
             },
             _username:{
-                required:"Specify your user name"
+                required:"Specify your user name",
+                remote:"Username already exist"
             },
             _password:{
                 required:"Must be enter a password",

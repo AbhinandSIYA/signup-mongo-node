@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
     res.render('index');
 });
 
+
 router.post('/',function (req,res) {
     let firstName=req.body._firstname;
     let lastName=req.body._lastname;
