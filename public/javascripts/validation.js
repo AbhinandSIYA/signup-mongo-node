@@ -17,7 +17,16 @@ $().ready(function () {
             },
             _email: {
                 required: true,
-                email: true
+                email: true,
+                remote :
+                    {
+                        url: '/validation/email',
+                        type: 'post',
+                        data:
+                            {
+                                '_email': $('#email').val()
+                            }
+                    }
             },
             _username:{
                 required:true,
@@ -53,7 +62,8 @@ $().ready(function () {
             },
             _email: {
                 required: "Please specify your email",
-                email: "Your email address must be in the format of name@domain.com"
+                email: "Your email address must be in the format of name@domain.com",
+                remote: "Email id already exist"
             },
             _username:{
                 required:"Specify your user name"

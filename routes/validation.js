@@ -5,22 +5,24 @@ let mongoClient=require('mongodb').MongoClient;
 
 router.post('/',function (req,res) {
 
-    console.log(firstName)
-
-    let url='mongodb://localhost:27017'
+    let url = 'mongodb://localhost:27017';
 
     mongoClient.connect(url, function (err, client) {
         if (err) {
             console.log('Database connection error' + err)
 
         } else {
+            let myDB = client.db('signupdb');
 
-            if (client) {
-              res.send(false);
-            }
-            else{
-                res.send(true);
-            }
+            myDB.collection('formCollection').findOne({_email:email}, function (err, user) {
+
+                if (user) {
+                    res.send(false);
+                } else {
+                    res.send(true);
+                }
+            })
+
         }
 
     })
