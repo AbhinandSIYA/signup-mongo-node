@@ -1,9 +1,11 @@
+
+
 <div class="my-form">
     <div class="cotainer">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-8">
                 <div class="card">
-                    <div class="card-header ">SIGN UP</div>
+                    <div class="card-header ">TABLE</div>
                     <div   class="card-body">
                         <table class="table table-striped">
                             <thead>
@@ -16,19 +18,29 @@
                                 <th>Username</th>
                                 <th>Phone</th>
                                 <th>Game</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>{{_firstname}}</td>
-                                <td>{{_lastname}}</td>
-                                <td>{{_gender}}</td>
-                                <td>{{_select1}}</td>
-                                <td>{{_email}}</td>
-                                <td>{{_username}}</td>
-                                <td>{{_phnumber}}</td>
-                                <td>{{_games}}</td>
-                            </tr>
+                            {{# each item }}
+                                <tr>
+                                    <td>{{this._firstname}}</td>
+                                    <td>{{this._lastname}}</td>
+                                    <td>{{this._gender}}</td>
+                                    <td>{{this._Select1}}</td>
+                                    <td>{{this._email}}</td>
+                                    <td>{{this._username}}</td>
+                                    <td>{{this._phnumber}}</td>
+                                    <td>{{this._games}}</td>
+                                    <td><form action="/update-form">
+                                        <input class="hiddenid" type="text" style="visibility: hidden" name="id" value="{{this._id}}">
+                                        <input type="submit" value="EDIT">
+                                    </form></td>
+                                    <td><a href="output" name="del">Delete</a></td>
+                                </tr>
+                            {{/each}}
+
                             </tbody>
                         </table>
                     </div>
@@ -38,3 +50,4 @@
         </div>
     </div>
 </div>
+

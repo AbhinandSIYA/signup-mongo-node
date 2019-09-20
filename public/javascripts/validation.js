@@ -20,7 +20,7 @@ $().ready(function () {
                 email: true,
                 remote :
                     {
-                        url: '/validation',
+                        url: '/validation/email',
                         type: 'post',
                         data:
                             {
@@ -28,18 +28,21 @@ $().ready(function () {
                                     return $('#email').val()
                                 }
                             }
-                    }
+                    },
             },
             _username:{
                 required:true,
+
+            },
+            _phnumber:{
                 remote :
                     {
-                        url: '/validation',
+                        url: '/validation/phnum',
                         type: 'post',
                         data:
                             {
-                                _username:function () {
-                                    return $('#username').val()
+                                _phnumber:function () {
+                                    return $('#phone_number').val()
                                 }
                             }
                     }
@@ -80,7 +83,9 @@ $().ready(function () {
             },
             _username:{
                 required:"Specify your user name",
-                remote:"Username already exist"
+            },
+            _phnumber:{
+                remote:"Phone number  already exist"
             },
             _password:{
                 required:"Must be enter a password",

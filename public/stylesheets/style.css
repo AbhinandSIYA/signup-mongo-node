@@ -31,3 +31,7 @@
 .error{
   color: red;
 }
+
+.hiddenid{
+  display: none;
+}

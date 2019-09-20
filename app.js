@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 let signupRouter=require('./routes/signup');
 let validatiionRouter=require('./routes/validation');
 let outputRouter=require('./routes/output');
+let updateFormRouter=require('./routes/update-form');
+let updateViewRouter=require('./routes/update-view');
 
 var app = express();
 
@@ -27,6 +29,8 @@ app.use('/users', usersRouter);
 app.use('/signup',signupRouter);
 app.use('/validation',validatiionRouter);
 app.use('/output',outputRouter);
+app.use('/update-form',updateFormRouter);
+app.use('/update-view',updateViewRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
