@@ -98,7 +98,7 @@ router.post('/update', function(req, res, next) {
             if (myDB) {
                 console.log('reached');
 
-                myDB.collection('formCollection').updateOne({_id:objectId(id)},{ $set: { _firstname: firstName, _lastname: lastName, _gender: gender, _Select1: country, _email: email, _username: userName,password: password, _phnumber: mob, _games: game }}, function (err,docs) {
+                myDB.collection('formCollection').updateOne({_id:objectId(id)},{ $set: { _firstname: firstName, _lastname: lastName, _gender: gender, _Select1: country, _username: userName,password:password, _games: game }}, function (err,docs) {
                     if (err) {
                         console.log('error' + err)
                     } else {

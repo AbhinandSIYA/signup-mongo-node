@@ -119,38 +119,12 @@ $().ready(function () {
             _Select1:{
                 required:true
             },
-            _email: {
-                required: true,
-                email: true,
-                remote :
-                    {
-                        url: '/validation/email',
-                        type: 'post',
-                        data:
-                            {
-                                _email:function () {
-                                    return $('#email').val()
-                                }
-                            }
-                    },
-            },
+
             _username:{
                 required:true,
 
             },
-            _phnumber:{
-                remote :
-                    {
-                        url: '/validation/phnum',
-                        type: 'post',
-                        data:
-                            {
-                                _phnumber:function () {
-                                    return $('#phone_number').val()
-                                }
-                            }
-                    }
-            },
+
             _password:{
                 required:true,
                 minlength:8
@@ -180,16 +154,9 @@ $().ready(function () {
             _Select1:{
                 required:"Please specify your country"
             },
-            _email: {
-                required: "Please specify your email",
-                email: "Your email address must be in the format of name@domain.com",
-                remote: "Email id already exist"
-            },
+
             _username:{
                 required:"Specify your user name",
-            },
-            _phnumber:{
-                remote:"Phone number  already exist"
             },
             _password:{
                 required:"Must be enter a password",
