@@ -1,0 +1,43 @@
+<div class="my-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-8">
+                <div class="card">
+                    <div class="card-header ">TABLE</div>
+                    <div   class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Gender</th>
+                                <th>Country</th>
+                                <th>Email</th>
+                                <th>Username</th>
+                                <th>Phone</th>
+                                <th>Game</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{# each data }}
+                                <tr>
+                                    <td>{{this._firstname}}</td>
+                                    <td>{{this._lastname}}</td>
+                                    <td>{{this._gender}}</td>
+                                    <td>{{this._Select1}}</td>
+                                    <td>{{this._email}}</td>
+                                    <td>{{this._username}}</td>
+                                    <td>{{this._phnumber}}</td>
+                                    <td>{{this._games}}</td>
+                            {{/each}}
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

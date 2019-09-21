@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
 let mongoClient=require('mongodb').MongoClient;
-let objectId=require('mongodb').ObjectId;
-let assert=require('assert');
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
