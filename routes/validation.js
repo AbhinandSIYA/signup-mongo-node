@@ -3,9 +3,9 @@ var router = express.Router();
 let mongoClient=require('mongodb').MongoClient;
 
 
-router.post('/email',function (req,res) {
+router.post('/phnum',function (req,res) {
 
-    let email=req.body._email;
+    let mob=req.body._phnumber;
 
     let url = 'mongodb://localhost:27017';
 
@@ -17,7 +17,7 @@ router.post('/email',function (req,res) {
             let myDB = client.db('signupdb');
 
             if (myDB){
-                myDB.collection('formCollection').findOne({_email:email}, function (err, user) {
+                myDB.collection('formCollection').findOne({_phnumber:mob}, function (err, user) {
                     console .log(user)
                     if(err){
                         console.log("error")
@@ -37,9 +37,9 @@ router.post('/email',function (req,res) {
 });
 
 
-router.post('/phnum',function (req,res) {
+router.post('/email',function (req,res) {
 
-    let mob=req.body._phnumber;
+    let email=req.body._email;
 
     let url = 'mongodb://localhost:27017';
 
@@ -51,7 +51,7 @@ router.post('/phnum',function (req,res) {
             let myDB = client.db('signupdb');
 
             if (myDB){
-                myDB.collection('formCollection').findOne({_phnumber:mob}, function (err, user) {
+                myDB.collection('formCollection').findOne({_email:email}, function (err, user) {
                     console .log(user)
                     if(err){
                         console.log("error")

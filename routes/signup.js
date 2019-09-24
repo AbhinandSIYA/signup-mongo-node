@@ -16,7 +16,7 @@ router.post('/',function (req,res) {
     let email=req.body._email;
     let userName=req.body._username;
     let mob=req.body._phnumber;
-    let password=req.body.password;
+    let password=req.body._password;
     let game=req.body._games;
 
     console.log(firstName)
@@ -41,7 +41,7 @@ router.post('/',function (req,res) {
                     _email: email,
                     _username: userName,
                     _phnumber: mob,
-                    password: password,
+                    _password: password,
                     _games: game
                 }, function (err, result) {
                     if (err) {

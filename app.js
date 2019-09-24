@@ -11,6 +11,7 @@ let validatiionRouter=require('./routes/validation');
 let outputRouter=require('./routes/output');
 let updateFormRouter=require('./routes/update-form');
 let updateViewRouter=require('./routes/update-view');
+let logInViewer=require('./routes/login');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/validation',validatiionRouter);
 app.use('/output',outputRouter);
 app.use('/update-form',updateFormRouter);
 app.use('/update-view',updateViewRouter);
+app.use('/login',logInViewer);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
